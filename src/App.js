@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import Products from "./pages/Products";
 import Root from "./pages/Root";
 import Error from "./pages/Error";
+import ProductDetail from "./pages/ProductDetail";
 
 //Paths -->
 //https//example.com/products
@@ -19,9 +20,11 @@ const router = createBrowserRouter([
     errorElement: <Error/>,
     children: [
       { path: '/', element: <HomePage /> },
-      { path: '/products', element: <Products /> }
+      { path: '/products', element: <Products /> },
+      {path: '/products/:productId', element: <ProductDetail />}
     ]
   },
+
 ]);
 
 // React-Router-DOM package < 6.4 old way deprecated
