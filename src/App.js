@@ -17,11 +17,11 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    errorElement: <Error/>,
+    errorElement: <Error />,
     children: [
-      { path: '/', element: <HomePage /> },
+      { index: true, element: <HomePage /> },       //path: '' --> indexed Routes
       { path: '/products', element: <Products /> },
-      {path: '/products/:productId', element: <ProductDetail />}
+      { path: '/products/:productId', element: <ProductDetail /> }
     ]
   },
 
